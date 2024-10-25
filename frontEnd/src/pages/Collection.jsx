@@ -164,7 +164,7 @@ const collection = () => {
           <Title text1={"All"} text2={"COLLECTIONS"} />
           {/* product sort */}
           <select
-            onClick={(e) => setSortType(e.target.value)}
+            onChange={(e) => setSortType(e.target.value)}
             className="border-2 border-gray-300 text-sm px-2"
           >
             <option value="relavent">Sort by: Relavent</option>
