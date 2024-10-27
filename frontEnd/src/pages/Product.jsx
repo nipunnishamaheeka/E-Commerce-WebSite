@@ -6,7 +6,7 @@ import RelatedProducts from "../components/RelatedProducts";
 
 const Product = () => {
   const { productId } = useParams();
-  const { products, currency,addToCart } = useContext(ShopContext);
+  const { products, currency, addToCart } = useContext(ShopContext);
 
   const [productData, setProductData] = useState(false);
   const [image, setImage] = useState("");
@@ -79,7 +79,10 @@ const Product = () => {
               ))}
             </div>
           </div>
-          <button onClick={() => addToCart(productData._id,size)} className="bg-black text-white px-8 py-3 text-sm active:bg-gray-700 ">
+          <button
+            onClick={() => addToCart(productData._id, size)}
+            className="bg-black text-white px-8 py-3 text-sm active:bg-gray-700 "
+          >
             ADD TO CART
           </button>
           <hr className="mt-8 sm:w-4/5" />
@@ -94,15 +97,28 @@ const Product = () => {
       <div className="mt-20">
         <div className="flex">
           <b className="border px-5 py-3 text-sm">Description</b>
-          <p className="border px-5 py-3 text-sm" > Reviews (122)</p>
+          <p className="border px-5 py-3 text-sm"> Reviews (122)</p>
         </div>
         <div className="flex flex-col gap-4 border px-6 py-6 text-sm text-gray-600">
-          <p >Lorem, ipsum dolor sit amet consectetur adipisicing elit. A voluptatem nostrum voluptatibus molestias error officia temporibus aperiam quas officiis autem sit architecto soluta provident amet, magni veritatis voluptates dolore tempore?</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus harum, odio itaque voluptates illum quasi eos ipsum non sint aut. Cupiditate veritatis distinctio nobis cum? Rerum impedit ut beatae labore!</p>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. A
+            voluptatem nostrum voluptatibus molestias error officia temporibus
+            aperiam quas officiis autem sit architecto soluta provident amet,
+            magni veritatis voluptates dolore tempore?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
+            harum, odio itaque voluptates illum quasi eos ipsum non sint aut.
+            Cupiditate veritatis distinctio nobis cum? Rerum impedit ut beatae
+            labore!
+          </p>
         </div>
       </div>
       {/* dispaly related products */}
-      <RelatedProducts category={productData.category}  subCategory={productData.subCategory}/>
+      <RelatedProducts
+        category={productData.category}
+        subCategory={productData.subCategory}
+      />
     </div>
   ) : (
     <div className="opacity-0"></div>
