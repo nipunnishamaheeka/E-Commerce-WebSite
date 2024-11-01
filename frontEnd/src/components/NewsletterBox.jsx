@@ -10,10 +10,7 @@ function NewsletterBox() {
         <strong> Subscribe now & get 20% off</strong>
       </p>
       <p className="text-gray-400 mt-3">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-        nisi quibusdam facere? Aliquam dolores, suscipit consectetur similique
-        veniam necessitatibus rem dolorum laborum inventore minima repellat
-        veritatis molestiae! Ipsa, sed vel?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </p>
       <form
         onSubmit={onSubmitHandler}
