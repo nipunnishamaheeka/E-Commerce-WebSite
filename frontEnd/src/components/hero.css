@@ -1,0 +1,46 @@
+.heading-animation {
+    animation: fadeIn 2s ease-in-out;
+}
+
+.shop-now-animation {
+    animation: slideIn 1.5s ease-in-out;
+    transition: color 0.3s;
+}
+
+.shop-now-animation:hover {
+    color: #000;
+}
+
+.image-animation {
+    animation: zoomIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
